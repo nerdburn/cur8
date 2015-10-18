@@ -1,0 +1,76 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  .box-sizing(border-box);
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  font-size: 0.85rem;
+
+  .modal-overlay,
+  .modal-body {
+    .transition(all 0.2s ease-in-out);
+    .opacity(0);
+  }
+
+  .modal-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: @gutter*1.5;
+    .translate(-50%, -50%);
+    width: 600px;
+    background-color: @white;
+    z-index: 3;
+    .rounded(@corners);
+    h2, h3, p {
+      color: @black;
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: @gutter;
+    right: @gutter;
+    color: @black;
+    z-index: 100000;
+    font-size: 0.65rem;
+    &:hover {
+      color: @black;
+    }
+  }
+
+  &.on {
+    .modal-overlay { .opacity(0.9); }
+    .modal-body { top: 50%; .opacity(1); }
+  }
+}
+
+.modal-confirm {
+  text-align: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  background: -moz-radial-gradient(center,ellipse cover, @overlays-start 0, @overlays-end 100%);
+  background: -webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,@overlays-start),color-stop(100%,@overlays-end));
+  background: -webkit-radial-gradient(center,ellipse cover,@overlays-start 0,@overlays-end 100%);
+  background: -o-radial-gradient(center,ellipse cover,@overlays-start 0,@overlays-end 100%);
+  background: -ms-radial-gradient(center,ellipse cover,@overlays-start 0,@overlays-end 100%);
+  background: radial-gradient(center,ellipse cover,@overlays-start 0,@overlays-end 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000',endColorstr='#e6000000',GradientType=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}

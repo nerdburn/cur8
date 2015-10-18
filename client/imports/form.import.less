@@ -1,0 +1,88 @@
+form {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  fieldset {
+    display: block;
+    margin: 0;
+    padding: @gutter 0 0 0;
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+  &.bg {
+    background-color: @white;
+    padding: @gutter*2;
+    .rounded(@corners);
+    .drop-shadow(0, 1px, 0.5px, 0.2);
+  }
+  .row {
+    &.submit {
+      padding-top: @gutter*2;
+      button {
+        margin-left: @gutter;
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  h2 {
+    padding-bottom: @gutter;
+  }
+  h3 {
+    padding-bottom: @gutter/2;
+  }
+  p {
+    font-size: 0.85rem;
+  }
+  .row,
+  .half,
+  .third {
+    &.has-error {
+      input,
+      textarea,
+      select {
+        border: 1px solid @red;
+      }
+      p.error {
+        display: block;
+        color: @red;
+      }
+    }
+  }
+}
+
+input,
+textarea,
+select,
+.input {
+  display: block;
+  outline: none;
+  font-size: 0.85rem;
+  width: 100%;
+  padding: @gutter/4 @gutter/2;
+  border: 1px solid @hr;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  .rounded(@corners);
+  color: @black;
+  background-color: @white;
+  &:focus {
+    border-color: @blue;
+  }
+}
+
+label {
+  text-transform: uppercase;
+  color: @black;
+  font-size: 0.75rem;
+}
+
+textarea {
+  overflow: hidden;
+  resize: none;
+}
+select {
+  text-indent: 6px;
+}

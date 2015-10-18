@@ -1,0 +1,48 @@
+header {
+  display: block;
+  padding: @gutter 0 @gutter 0;
+  .logo {
+    display: block;
+    float: left;
+    width: 50px;
+    img {
+      width: 100%;
+    }
+  }
+  .top-nav {
+    display: block;
+    float: right;
+    li {
+      display: inline-block;
+      padding-left: @gutter;
+      a {
+        color: @white;
+        font-weight: 400;
+        font-size: 0.85rem;
+        span.ss-icon {
+          position: relative;
+          top: 3px;
+          padding-right: 3px;
+        }
+        &:hover {
+          color: @yellow;
+        }
+      }
+    }
+  }  
+  .clearfix();
+}
+
+body.white-bg header {
+  .top-nav {
+    li {
+      a {
+        color: @grey;
+        &:hover {
+          color: @blue;
+        }
+      }
+    }
+  }
+}
+

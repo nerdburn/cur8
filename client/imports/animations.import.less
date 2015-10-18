@@ -1,0 +1,113 @@
+@-webkit-keyframes slide-in-down {
+  0% {
+    .opacity(0);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    .opacity(1);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.slide-in-down {
+  -webkit-animation: slide-in-down 400ms ease-in-out;
+  animation: slide-in-down 400ms ease-in-out;
+  &.ng-enter {
+    .opacity(0);
+    &.ng-enter-active {
+      .opacity(1);
+    }
+  }
+  &.ng-leave {
+    display: none;
+  }
+}
+
+@-webkit-keyframes slide-in-up {
+  0% {
+    .opacity(0);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  100% {
+    .opacity(1);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.slide-in-up {
+  -webkit-animation: slide-in-up 400ms ease-in-out;
+  animation: slide-in-up 400ms ease-in-out;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  12.5% {
+    -webkit-transform: translateX(-6px) rotateY(-5deg);
+    transform: translateX(-6px) rotateY(-5deg);
+  }
+
+  37.5% {
+    -webkit-transform: translateX(5px) rotateY(4deg);
+    transform: translateX(5px) rotateY(4deg);
+  }
+
+  62.5% {
+    -webkit-transform: translateX(-3px) rotateY(-2deg);
+    transform: translateX(-3px) rotateY(-2deg);
+  }
+
+  87.5% {
+    -webkit-transform: translateX(2px) rotateY(1deg);
+    transform: translateX(2px) rotateY(1deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  12.5% {
+    -webkit-transform: translateX(-6px) rotateY(-5deg);
+    transform: translateX(-6px) rotateY(-5deg);
+  }
+
+  37.5% {
+    -webkit-transform: translateX(5px) rotateY(4deg);
+    transform: translateX(5px) rotateY(4deg);
+  }
+
+  62.5% {
+    -webkit-transform: translateX(-3px) rotateY(-2deg);
+    transform: translateX(-3px) rotateY(-2deg);
+  }
+
+  87.5% {
+    -webkit-transform: translateX(2px) rotateY(1deg);
+    transform: translateX(2px) rotateY(1deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  -webkit-animation: shake 400ms ease-in-out;
+  animation: shake 400ms ease-in-out;
+}

@@ -1,0 +1,17 @@
+<template name="signup">
+  <form class="align-center {{formShake}}" name="signup-form">
+    <input type="hidden" name="plan" value="free-cad" />
+    <h1>Sign Up</h1>
+    <fieldset>
+      <div class="row {{formErrorClass 'email'}}">
+        <input type="text" name="email" placeholder="Email Address" />
+      </div>
+      <div class="row {{formErrorClass 'password'}}">
+        <input type="password" name="password" placeholder="Password" />
+      </div>
+      <div class="row submit">
+        <button type="submit" class="blue-btn">Sign Up</button>
+      </div>
+    </fieldset>
+  </form>  
+</template>

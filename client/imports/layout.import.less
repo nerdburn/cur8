@@ -1,0 +1,159 @@
+* {
+  .box-sizing(border-box);
+}
+
+ul, li, img, form,
+table, tr, td, ol, p,
+h1, h2, h3, h4, fieldset {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: @blue;
+  &.white-bg {
+    background-color: @white;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.left { float: left; }
+.right { float: right; }
+
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid @hr;
+  border-bottom: 0;
+  margin: @gutter 0;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  .clearfix();
+}
+
+
+.eighty {
+  width: 80%;
+}
+.seventy {
+  width: 80%;
+}
+.sixty {
+  width: 60%;
+}
+.fifty {
+  width: 50%;
+}
+.fourty {
+  width: 40%;
+}
+.centered {
+  margin: 0 auto;
+}
+
+/* GRID */
+.half {
+  width: 50%;
+  float: left;
+}
+.quarter {
+  width: 25%;
+  float: left;
+}
+.third {
+  width: 33%;
+  float: left;
+}
+.two-thirds {
+  width: 66%;
+  float: left;
+}
+
+.grid {
+  display: block;
+  .clearfix();
+  &.pad {
+    .col {
+      &.third {
+        padding: 0 @gutter/2 0 @gutter/2;
+        &:nth-of-type(1) {
+          padding-left: 0;
+        }
+        &:nth-of-type(3) {
+          padding-right: 0;
+        }
+      }
+      &.quarter {
+        padding: 0 @gutter/2 0 @gutter/2;
+        &:nth-of-type(1) {
+          padding-left: 0;
+        }
+        &:nth-of-type(4) {
+          padding-right: 0;
+        }
+      }
+      &.half {
+        padding: 0 @gutter/2 0 @gutter/2;
+        &:nth-of-type(1) {
+          padding-left: 0;
+        }
+        &:nth-of-type(2) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.pad-right {
+  padding-right: @gutter;
+}
+
+.row {
+  position: relative;
+  padding: @gutter/4 0 @gutter/4 0;
+  .clearfix();
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  .half:nth-of-type(1),
+  .third:nth-of-type(1) {
+    padding-right: @gutter/4;
+  }
+
+  .half:nth-of-type(2),
+  .third:nth-of-type(3) {
+    padding-left: @gutter/4;
+  }
+
+  .third:nth-of-type(2) {
+    padding: 0 @gutter/4;
+  }
+
+}

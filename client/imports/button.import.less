@@ -1,0 +1,41 @@
+button {
+  .transition(all 0.2s ease-in-out);
+  display: inline-block;
+  outline: none;
+  border: 0;
+  background-color: @yellow;
+  .rounded(35px);
+  padding: @gutter/4 @gutter;
+  color: @blue;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;  
+  text-transform: uppercase;
+  
+  &:hover {
+    background-color: @white;
+    color: @blue;
+  }
+
+  &.blue-btn {
+    background-color: @blue;
+    color: @white;
+    &:hover {
+      background-color: @yellow;
+      color: @blue;
+    }
+  }
+
+  &:active,
+  &[data-loading] {
+    .translate(0, 2px);
+  }
+  &[disabled] {
+    cursor: default;
+    &[data-loading] {
+      border: 0;
+      .translate(0, 2px);
+    }
+  }
+}

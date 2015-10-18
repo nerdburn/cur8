@@ -1,0 +1,18 @@
+{
+  "public": {
+    "version": 1.0,
+    "defaultDateFormat": "MMM Do, YYYY",
+    "stripe": {
+      "pk": "pk_test_FPW0VrfxM1sJCRymMBDiidmo"
+    }
+  },
+  "stripe": {
+    "sk": "sk_test_6DqoAJkOd5aAILOg6OmXOqR7",
+    "pk": "pk_test_FPW0VrfxM1sJCRymMBDiidmo",
+    "customerEvents": [
+      "customer.created",
+      "customer.updated",
+      "customer.deleted"
+    ]
+  }
+}
