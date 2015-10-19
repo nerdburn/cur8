@@ -1,0 +1,11 @@
+<template name="flash">
+  {{#if flashMessage}}
+  <div class="flash {{flashType}} {{flashClass}}">
+    <p>
+      {{#if flashError}}<span class="ss-icon">warning</span>{{/if}}
+      {{#if flashSuccess}}<span class="ss-icon">check</span>{{/if}}
+      {{flashMessage}}
+    </p>
+  </div>
+  {{/if}}
+</template>

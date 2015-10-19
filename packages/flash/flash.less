@@ -1,0 +1,61 @@
+@black: #353e43;
+@white: #fff;
+@red: #db524c;
+@green: #36c361;
+@yellow: #edde8a;
+
+.transition(@args) {
+  -webkit-transition: @args;
+  -moz-transition: @args;
+  -o-transition: @args;
+  transition: @args;
+}
+
+.flash {
+  display: block;
+  .transition(top 0.2s ease-in-out);
+  padding: 20px 20px 25px 20px;
+  background-color: @green;
+  color: @white;
+  cursor: pointer;
+  position: fixed;
+  top: -100px;
+  left: 0;  
+  width: 100%;
+  font-size: 0.85rem;
+  z-index: 10002;
+  
+  &.on { 
+    top: 0;
+  }
+
+  &.success {
+    background-color: @green;
+    &:hover {
+      background-color: darken(@green, 5%);
+    }
+  }
+  &.fail,
+  &.error {
+    background-color: @red;
+    color: @white;
+    &:hover {
+      background-color: darken(@red, 5%);
+      color: @white;
+    }    
+  }
+  
+  &.warn {
+    background-color: @yellow;
+    color: darken(@yellow, 75%);
+    &:hover {
+      background-color: darken(@yellow, 5%);
+      color: @white;
+    }  
+  }  
+  
+  &:hover {
+    color: @white;
+    padding-left: 25px;
+  }
+}
