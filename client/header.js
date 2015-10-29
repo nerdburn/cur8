@@ -4,6 +4,9 @@ Template.header.events({
     var modalName = $(e.target).data('modal');
     Modal.show(modalName);
   },
+  'click [data-video]': function(e, t) {
+    Modal.show('video');
+  },
   'click [data-logout]': function(e, t) {
     Meteor.logout();
   }
