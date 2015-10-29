@@ -9,13 +9,15 @@
       {{#if currentUser}}
         <ul class="top-nav">
           <li><a href="{{pathFor route='account'}}">Account</a></li>
+          <li><a href="{{pathFor route='about'}}">About</a></li>          
           <li><a data-logout>Log Out</a></li>
         </ul>
       {{else}}
         <ul class="top-nav">
           <li><a data-modal="video"><span class="ss-icon">play</span> Watch Video</a></li>
+          <li><a href="{{pathFor route='about'}}">About</a></li>
           <li><a data-modal="login">Log In</a></li>
-          <li><a data-modal="signup">Sign Up</a></li>    
+          <li><a data-modal="signup">Sign Up</a></li>
         </ul>
       {{/if}}
     </div>
