@@ -14,6 +14,7 @@ Template.login.events({
         console.log('login with password worked..');
         console.log('user: ', Meteor.user());
         Modal.hide();
+        ga('send', 'event', 'Accounts', 'login', email);
         Router.go('account');
       }
     });
