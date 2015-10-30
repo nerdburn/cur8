@@ -11,17 +11,3 @@ Template.header.events({
     Meteor.logout();
   }
 });
-
-Template.header.helpers({
-  isWhite: function() {
-    var route = Router.current().route.getName();
-    switch(route) {
-      case 'account':
-        return true;
-        break;
-      default:
-        return false;
-        break;
-    }
-  }
-});

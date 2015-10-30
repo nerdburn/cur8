@@ -12,15 +12,27 @@ h1, h2, h3, h4, fieldset {
   border: 0;
 }
 
-body, html {
-  width: 100%;
+body {
   height: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
   background-color: @blue;
   color: @white;
+  img.white-logo {
+    display: block;
+  }
+  img.blue-logo {
+    display: none;
+  }  
   &.white-bg {
     background-color: @white;
+    img.white-logo {
+      display: none;
+    }
+    img.blue-logo {
+      display: block;
+    }
   }
 }
 

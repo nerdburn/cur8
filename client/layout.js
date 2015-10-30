@@ -1,16 +1,5 @@
 Template.layout.helpers({
-  isWhite: function() {
-    var route = Router.current().route.getName();
-    switch(route) {
-      case 'account':
-        return true;
-        break;
-      default:
-        return false;
-        break;
-    }
-  },  
-  isLoggedIn: function(){
+  isLoggedIn: function() {
     if(Meteor.loggingIn()) {
       console.log('logging in...');
       return false;
