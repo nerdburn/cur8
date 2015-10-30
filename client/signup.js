@@ -30,6 +30,7 @@ Template.signup.events({
           console.log(Meteor.user());
           Modal.hide();
           Flash.success('Thanks for signing up :)');
+          ga('send', 'event', 'Accounts', 'signup', data.email);
         }
 
       });
