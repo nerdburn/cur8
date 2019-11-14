@@ -5,6 +5,8 @@ Template.login.events({
     var email = $('input[name="email"]').val();
     var pass = $('input[name="password"]').val();
 
+    // test login token - Ufm0gkLtfjcp_tkBv4suv4g-4VkUNMa5KiN3AvjxULB
+
     Meteor.loginWithPassword(email, pass, function(err){
       if(err) {
         console.log('login error: ', err);
